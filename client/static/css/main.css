@@ -1,0 +1,61 @@
+html,body{
+	margin: 0;
+	padding: 0;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	height: 100%;
+	color:#36454d;
+	background-color: #f0f3f5;
+}
+*{
+	box-sizing:border-box;
+}
+button, .button{
+	text-decoration: none;
+	text-align: center;
+	width: 140px;
+	height: 40px;
+	border: none;
+	font-size: 16px;
+	color: white;
+	cursor: pointer;
+	border-radius: 3px;
+}
+a{
+	color: #4688CD;
+	cursor: pointer;
+    font-size: 14px;
+}
+main a:hover{
+	text-decoration: underline;
+	color: #1D5FA4;
+}
+#header{
+    background-color: #273954;
+    padding: 9px 0;
+    color: #fff;
+    height: 51px;
+}
+#fragezeichen{
+    width: 64px;
+    text-align: center;
+    margin-left: auto;
+    font-size: 27px;
+}
+.green{
+    background-color: #379965;
+}
+.green:hover{
+    background-color: #2b724c;
+}
+.yellow{
+    background-color: #f0dc56;
+}
+.yellow:hover{
+    background-color: #978a36;
+}
+.red{
+    background-color: #da5069;
+}
+.red:hover{
+    background-color: #943647;
+}

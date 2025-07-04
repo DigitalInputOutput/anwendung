@@ -1,0 +1,10 @@
+[
+    {
+        "model": "anwendung.umfrage",
+        "pk": 1,
+        "fields":{
+            "name": "Erste uber Verkauf",
+            "end_date": "2025-08-15"
+        }
+    }
+]

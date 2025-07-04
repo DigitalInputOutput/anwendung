@@ -1,0 +1,3 @@
+#login-form .fieldset{
+    grid-template-columns: 1fr;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start Page</title>
+    <link rel="stylesheet" href="/static/css/main.css">
+    <link rel="stylesheet" href="/static/css/user/form.css">
+    <link rel="stylesheet" href="/static/css/user/login.css">
+    <link rel="stylesheet" href="/static/css/user/logup.css">
+    <link rel="stylesheet" href="/static/css/anwendung/umfrage.css">
+</head>
+<body>
+    {%block body%}
+        <div id="header">
+            <div id="fragezeichen">
+                {%if umfrage%}?{%endif%}
+            </div>
+        </div>
+        <div class="umfrage">
+            <h1>Umfrage {{umfrage.name}}</h1>
+
+            <div class="text">
+                <p>Hallo <b>{{user.full_name}}</b> von <b>{{user.firma}}</b></p>
+                <p>es ist wieder so weit, eine neue Monats-Benchmark wird zusammengetragen.</p>
+                <br><br>
+                <p>Du bist herzlich eingeladen daran mitzuwirken.</p>
+                <br>
+                Dein Lohn, die Ergebnisse an denen du mitgewirkt hast.
+                <br>
+                <p>Die Umfrage ist freiwillig.</p>
+                <br>
+                <p>Die Ergebnisse dürfen nicht veröffentlicht werden und sind nur firmenintern zu nutzen.</p>
+                <br>
+                <p>Die Ergebnisse werden anonymisiert dargestellt.</p>
+                <br><br><br>
+                <p>Eine Teilnahme ist bis zum {{umfrage.end_date}} möglich.</p>
+            </div>
+            <div class="buttons">
+                <button class="green">Jetzt teilnehmen</button>
+                <button class="yellow">Vielleicht später</button>
+                <button class="red">Dieses Mal nicht</button>
+            </div>
+        </div>
+    {%endblock%}
+</body>
+</html>
