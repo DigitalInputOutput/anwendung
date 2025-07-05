@@ -1,4 +1,66 @@
 .umfrage{
     width: 70%;
     margin: auto;
+    display: none;
+}
+.umfrage.active{
+    display: block;
+}
+.question{
+    display: grid;
+    grid-gap: 12px;
+    padding-bottom: 31px;
+    margin-top: 25px;
+}
+.tab-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.result-bar {
+    width: 505px;
+    height: 31px;
+    display: flex;
+    background: #ccc;
+    border-radius: 4px;
+    overflow: hidden;
+    color: #f5f0f0;
+}
+.part {
+    height: 100%;
+    text-align: center;
+    line-height: 29px;
+}
+.part-a {
+    background-color: #3b457c;
+}
+.part-b {
+    background-color: #f48f36;
+}
+.part-c {
+    background-color: #ae4e93;
+}
+.satisfaction-widget {
+  display: flex;
+  justify-content: space-between;
+  max-width: 300px;
+  margin: 20px 0;
+  font-size: 2rem;
+  cursor: pointer;
+  user-select: none;
+}
+.emoji {
+  transition: transform 0.2s;
+}
+.emoji:hover {
+  transform: scale(1.3);
+}
+.emoji[data-value="1"] { color: #e53935; }
+.emoji[data-value="2"] { color: #fb8c00; }
+.emoji[data-value="3"] { color: #fdd835; }
+.emoji[data-value="4"] { color: #7cb342; }
+.emoji[data-value="5"] { color: #43a047; }
+
+.hinweis{
+    color: rgb(193, 191, 191);
 }
