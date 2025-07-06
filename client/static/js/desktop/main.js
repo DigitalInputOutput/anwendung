@@ -1,6 +1,6 @@
 import { Dom } from "./vanilla/dom.js";
 
-export class Menu{
+export class Main{
     constructor(){
         this.bindEvents();
         this.activeTab = Dom.query(".tab.active");
