@@ -1,7 +1,7 @@
 cryptography
+csscompressor
 Django
 ipython
+jsmin
 PyMySQL
 python-decouple
-jsmin
-csscompressor
