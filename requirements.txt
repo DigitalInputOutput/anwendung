@@ -3,3 +3,5 @@ Django
 ipython
 PyMySQL
 python-decouple
+jsmin
+csscompressor
