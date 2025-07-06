@@ -54,6 +54,6 @@ static query(selector){if(Dom.id_regex.test(selector)){var item=document.querySe
 static create(element){return document.createElement(element);};static getTemplate(templateName){return Dom.query(templateName).content.cloneNode(true);}
 static insert(html,container,aCallback){Dom.query(container).html(html);Dom.query(`${container}a`).on('click',aCallback);const scripts=Dom.query(`${container}script`);scripts.forEach(oldScript=>{const newScript=Dom.create('script');if(oldScript.src){newScript.src=oldScript.src;newScript.async=true;}else{newScript.textContent=oldScript.textContent;}
 oldScript.replaceWith(newScript);});}}
-export class Menu{constructor(){this.bindEvents();this.activeTab=Dom.query(".tab.active");this.activeButton=Dom.query(".tabButton.active");}
+export class Main{constructor(){this.bindEvents();this.activeTab=Dom.query(".tab.active");this.activeButton=Dom.query(".tabButton.active");}
 bindEvents(){Dom.query("#tab-buttons button").each((button)=>{button.on("click",this.activateTab.bind(this));});}
 activateTab(e){const btn=e.target.closest("button");if(!btn)return;const tabKey=btn.get('data-tab');if(!tabKey)return;const newTab=Dom.query(`.tab[data-tab=${tabKey}]`);if(!newTab)return;this.activeTab.removeClass("active");this.activeButton.removeClass("active");newTab.addClass("active");btn.addClass("active");this.activeTab=newTab;this.activeButton=btn;}}
