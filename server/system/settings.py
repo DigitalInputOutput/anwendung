@@ -30,7 +30,7 @@ SECRET_KEY = 'django-insecure-nlwiln8l4fk$bni*8kh8l@v2*dv#01koa20m3y_8ukxp7$l$tp
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config("DEBUG", cast=bool)
 
-ALLOWED_HOSTS = ["anwendung.com.de"]
+ALLOWED_HOSTS = ["anwendung.com.de","ivanio.pythonanywhere.com"]
 
 # Application definition
 
@@ -85,7 +85,10 @@ DATABASES = {
         'NAME': config("DB_NAME"),
         'USER': config("DB_USER"),
         'PASSWORD': config("DB_PASSWORD"),
-        'HOST': 'localhost'
+        'HOST': config("DB_HOST"),
+	'OPTIONS': {
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+        },
     }
 }
 
@@ -126,6 +129,9 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+STATIC_ROOT = HOME_DIR / 'client/static'
+
+MEDIA_ROOT = HOME_DIR / 'media'
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
