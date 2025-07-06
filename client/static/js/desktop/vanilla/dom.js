@@ -1,3 +1,5 @@
+import './prototype/index.js';
+
 export class Dom {
 	/**
 	 * Selects elements from the DOM.

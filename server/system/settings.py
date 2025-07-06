@@ -14,12 +14,22 @@ from pathlib import Path
 from decouple import config
 import os, pymysql, sys
 
+USER=config("USER")
+GROUP=config("GROUP")
+
 pymysql.install_as_MySQLdb()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 HOME_DIR = BASE_DIR.parent
+
+CACHE_FOLDER = HOME_DIR / "client/cache/"
+
+MAX_MINIFIED_VERSIONS = 3
+MINIFIED_ROOT = CACHE_FOLDER / 'users/static/'
+
+MEDIA_ROOT = HOME_DIR / 'media/'
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
@@ -68,6 +78,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'anwendung.context.index_context'
             ],
         },
     },
