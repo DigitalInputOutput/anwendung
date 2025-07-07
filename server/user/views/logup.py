@@ -12,7 +12,7 @@ class LogupView(View):
         if request.user.is_authenticated:
             return redirect('/')
 
-        html_template = 'base.html' if is_ajax(request) else 'index.html'
+        html_template = 'desktop/base.html' if is_ajax(request) else 'desktop/index.html'
 
         context = {
             'base': html_template,
@@ -20,7 +20,7 @@ class LogupView(View):
             'h1': _('Registration')
         }
 
-        return render(request, 'user/logup.html', context)
+        return render(request, 'desktop/user/logup.html', context)
 
     def post(self,request,*args,**kwargs):
         if is_ajax(request):
@@ -46,7 +46,7 @@ class LogupView(View):
             else:
                 return redirect(request.META['HTTP_REFERER'])
         else:
-            html_template = 'base.html' if is_ajax(request) else 'index.html'
+            html_template = 'desktop/base.html' if is_ajax(request) else 'desktop/index.html'
 
             context = {
                 'base': html_template,
@@ -54,4 +54,4 @@ class LogupView(View):
                 'error': _('Form error.')
             }
 
-        return render(request, 'user/logup.html', context)
+        return render(request, 'desktop/user/logup.html', context)

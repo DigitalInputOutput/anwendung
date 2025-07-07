@@ -1,4 +1,27 @@
 /* depends on: main.css */
+#tab-buttons {
+  display: flex;
+  margin-top: auto;
+  grid-gap: 1px;
+}
+#tab-buttons > button {
+  display: block;
+  border-radius: 0;
+}
+#tab-buttons > button.active{
+    background-color: #f0f3f5;
+}
+#fragezeichen{
+    width: 33px;
+    text-align: center;
+	margin: auto 14px auto auto;
+    font-size: 27px;
+	background-color: #fff;
+	border-radius: 50px;
+	color: #427cc7;
+	margin-right: 14px;
+    cursor: pointer;
+}
 .umfrage{
     width: 70%;
     margin: auto;
@@ -64,4 +87,8 @@
 
 .hinweis{
     color: rgb(193, 191, 191);
+}
+
+.weiter {
+    margin-top: 24px;
 }

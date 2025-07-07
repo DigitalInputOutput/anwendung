@@ -8,3 +8,4 @@ uwsgi.ini
 node_modules/
 .env
 server/anwendung/management/commands/reset_dev_db.py
+client/cache/

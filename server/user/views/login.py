@@ -18,7 +18,7 @@ class LoginView(View):
 
     def get(self,request,*args,**kwargs):
         if request.user.is_anonymous:
-            html_template = 'base.html' if is_ajax(request) else 'index.html'
+            html_template = 'desktop/base.html' if is_ajax(request) else 'desktop/index.html'
 
             context = {
                 'base': html_template,
@@ -26,7 +26,7 @@ class LoginView(View):
                 'form': LogInForm()
             }
 
-            return render(request, 'user/login.html',context)
+            return render(request, 'desktop/user/login.html',context)
 
         # user is already logged in
         elif is_ajax(request):
@@ -46,7 +46,7 @@ class LoginView(View):
             data = request.POST
 
         if request.user.is_anonymous:
-            html_template = 'base.html' if is_ajax(request) else 'index.html'
+            html_template = 'desktop/base.html' if is_ajax(request) else 'desktop/index.html'
 
             form = LogInForm(data)
 
@@ -77,7 +77,7 @@ class LoginView(View):
                 'form': form,
             }
 
-            return render(request, 'user/login.html',context)
+            return render(request, 'desktop/user/login.html',context)
 
         # user is already logged in
         elif is_ajax(request):
