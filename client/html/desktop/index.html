@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Start Page</title>
-    <link rel="stylesheet" href="/cache/users/static/css/desktop/{{css_version}}/main_min_critical.css">
+    
 </head>
 <body>
     {%block body%}
@@ -362,7 +362,19 @@
             <button class="red">Verwerfen</button>
         </div>
     {%endblock%}
-<link rel="stylesheet" href="/cache/users/static/css/desktop/{{css_version}}/main_min.css">
-<script type="module" src="/cache/users/static/js/desktop/{{js_version}}/main_min.js"></script><script type="module">import { Dom, Main } from "/cache/users/static/js/desktop/{{js_version}}/main_min.js"; window.Dom = Dom;window.Main = new Main();</script>
+<link rel="stylesheet" href="/static/css/desktop/main.css">
+<link rel="stylesheet" href="/static/css/desktop/user/form.css">
+<link rel="stylesheet" href="/static/css/desktop/user/login.css">
+<link rel="stylesheet" href="/static/css/desktop/user/logup.css">
+<link rel="stylesheet" href="/static/css/desktop/anwendung/umfrage.css">
+<script type="module" src="/static/js/desktop/vanilla/ui/dom.js" defer></script>
+<script type="module" src="/static/js/desktop/main.js" defer></script>
+<script type="module">
+                    import { Dom } from "/static/js/desktop/vanilla/ui/dom.js";
+                    import { Main } from "/static/js/desktop/main.js";
+
+                    window.Main = new Main();
+                    window.Dom = Dom;
+                </script>
 </body>
 </html>

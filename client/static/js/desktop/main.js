@@ -1,4 +1,4 @@
-import { Dom } from "./vanilla/dom.js";
+import { Dom } from "./vanilla/ui/dom.js";
 
 export class Main{
     constructor(){
@@ -9,6 +9,17 @@ export class Main{
     bindEvents(){
         Dom.query("#tab-buttons button").each((button)=>{
             button.on("click", this.activateTab.bind(this));
+        });
+        Dom.query("#spaterButton").on('click',() => {
+            this.activeTab.removeClass("active");
+            Dom.query('#fragezeichen').addClass("blink");
+        });
+        Dom.query("#jetztButton").on('click', () => {
+            this.activeTab.removeClass("active");
+            this.activeTab.next().addClass("active");
+        });
+        Dom.query("#nichtButton").on('click', () => {
+            Dom.query('#fragezeichen').remove();
         });
     }
     activateTab(e){

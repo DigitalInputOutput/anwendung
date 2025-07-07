@@ -21,20 +21,18 @@ class Command(BaseCommand):
         else:
             critical_css = '' 
             full_css = "\n".join([
-                '<link rel="stylesheet" href="/static/css/main.css">',
-                '<link rel="stylesheet" href="/static/css/user/form.css">',
-                '<link rel="stylesheet" href="/static/css/user/login.css">',
-                '<link rel="stylesheet" href="/static/css/user/logup.css">'
+                '<link rel="stylesheet" href="/static/css/desktop/main.css">',
+                '<link rel="stylesheet" href="/static/css/desktop/user/form.css">',
+                '<link rel="stylesheet" href="/static/css/desktop/user/login.css">',
+                '<link rel="stylesheet" href="/static/css/desktop/user/logup.css">',
+                '<link rel="stylesheet" href="/static/css/desktop/anwendung/umfrage.css">'
             ])
             scripts = "\n".join([
-                '<script src="/static/js/dom.js" defer></script>',
-                '<script src="/static/js/menu.js" defer></script>',
-                '<script type="module" src="/static/js/vanilla/prototype/index.js"></script>',
-                '<script type="module" src="/static/js/vanilla/dom.js"></script>',
-                '<script type="module" src="/static/js/main.js"></script>',
+                '<script type="module" src="/static/js/desktop/vanilla/ui/dom.js" defer></script>',
+                '<script type="module" src="/static/js/desktop/main.js" defer></script>',
                 '''<script type="module">
-                    import { Dom } from "/static/js/vanilla/dom.js";
-                    import { Main } from "/static/js/main.js";
+                    import { Dom } from "/static/js/desktop/vanilla/ui/dom.js";
+                    import { Main } from "/static/js/desktop/main.js";
 
                     window.Main = new Main();
                     window.Dom = Dom;
