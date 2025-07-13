@@ -25,11 +25,14 @@ class Command(BaseCommand):
                 '<link rel="stylesheet" href="/static/css/desktop/user/form.css">',
                 '<link rel="stylesheet" href="/static/css/desktop/user/login.css">',
                 '<link rel="stylesheet" href="/static/css/desktop/user/logup.css">',
-                '<link rel="stylesheet" href="/static/css/desktop/anwendung/umfrage.css">'
+                '<link rel="stylesheet" href="/static/css/desktop/anwendung/umfrage.css">',
+                '<link rel="stylesheet" href="/static/css/desktop/checkbox.css">',
+                '<link rel="stylesheet" href="/static/css/desktop/splitbar.css">'
             ])
             scripts = "\n".join([
                 '<script type="module" src="/static/js/desktop/vanilla/ui/dom.js" defer></script>',
                 '<script type="module" src="/static/js/desktop/main.js" defer></script>',
+                '<script type="module" src="/static/js/desktop/splitbar.js"></script>',
                 '''<script type="module">
                     import { Dom } from "/static/js/desktop/vanilla/ui/dom.js";
                     import { Main } from "/static/js/desktop/main.js";

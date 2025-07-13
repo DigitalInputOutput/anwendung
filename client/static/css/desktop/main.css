@@ -1,11 +1,26 @@
 /* critical */
+:root{
+	--green: #379965;
+	--dark-green: #1e5d3b;
+	--haki: #739655;
+	--dark-haki: #455c32;
+	--red: #bab0b1;
+	--dark-red: #b66e7b;
+	--grey: #f0f3f5;
+	--dark-grey: #666a6a;
+	--yellow: #f6e8c0;
+	--dark-yellow: #f8e353;
+	--light-text: #fffdfd;
+	--dark-text: #787878;
+	--light-red: rgb(255, 53, 53);
+}
 html,body{
 	margin: 0;
 	padding: 0;
 	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 	height: 100%;
 	color:#36454d;
-	background-color: #f0f3f5;
+	background-color: var(--dark-grey);
 }
 *{
 	box-sizing:border-box;
@@ -20,7 +35,6 @@ button, .button{
 	color: white;
 	cursor: pointer;
 	border-radius: 3px;
-	background-color: #739655;
 }
 button.active{
 	background-color: #ffd34f;
@@ -36,35 +50,61 @@ main a:hover{
 	color: #1D5FA4;
 }
 #header{
-    background-color: #5e6063;
+    background-color: #32425a00;
     color: #fff;
     height: 51px;
 	display: flex;
 }
 /* endcritical */
-.green{
-    background-color: #379965;
+#startButtons {
+	display: flex;
 }
-.green:hover{
-    background-color: #2b724c;
+#startButtons button{
+	width: 186px;
 }
-.yellow{
-    background-color: #ffd34f;
-	color: #3c3c3c;
+#jetztButton {
+    background-color: var(--green);
 }
-.yellow:hover{
-    background-color: #948312;
-	color: #dcd9d9;
+#jetztButton:hover {
+    background-color: var(--dark-green);
 }
-.red{
-    background-color: #da5069;
+#spaterButton {
+	background-color: var(--yellow);
+	color: var(--dark-text);
+	margin-left: auto;
 }
-.red:hover{
-    background-color: #943647;
+#spaterButton:hover {
+	background-color: var(--dark-yellow);
+}
+#nichtButton {
+    background-color: var(--red);
+	margin-left: 19px;
+}
+#nichtButton:hover {
+    background-color: var(--dark-red);
+}
+.required {
+	color: var(--light-red);
+}
+.input {
+	position: relative;
+	display: flex;
+	align-items: center;
+}
+.input input {
+	margin-right: 11px;
+}
+input {
+	padding: 10px 9px;
+	font-size: 14px;
+	width: 100%;
+	display: block;
+	border: 1px solid #ccc;
+	border-radius: 3px;
 }
 .blink {
-  animation: blink-animation 1s steps(5, start) infinite;
-  -webkit-animation: blink-animation 1s steps(5, start) infinite;
+  animation: blink-animation 2s steps(5, start) infinite;
+  -webkit-animation: blink-animation 2s steps(5, start) infinite;
 }
 @keyframes blink-animation {
   to {

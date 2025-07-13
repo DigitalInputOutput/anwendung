@@ -10,3 +10,5 @@ node_modules/
 server/anwendung/management/commands/reset_dev_db.py
 client/cache/
 client/html/desktop/index.html
+release.sh
+.DS_Store

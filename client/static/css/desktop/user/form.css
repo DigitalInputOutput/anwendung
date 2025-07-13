@@ -27,17 +27,6 @@
     padding-bottom: 6px;
     display: block;
 }
-.form .input{
-	position: relative;
-}
-.form input{
-	padding: 10px 9px;
-	font-size: 14px;
-	width: 100%;
-	display: block;
-	border: 1px solid #ccc;
-	border-radius: 3px;
-}
 .form button{
 	width: 101px;
 	margin-left: auto;
