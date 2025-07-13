@@ -1,0 +1,109 @@
+/* depends on: main.css */
+
+.bar {
+    display: none;
+    position: relative;
+    margin-top: 10px;
+    width: 80%;
+    height: 31px;
+    background: #ccc;
+    /* overflow: hidden; */
+    color: #f5f0f0;
+}
+.part {
+    height: 100%;
+    text-align: center;
+    line-height: 29px;
+    position: relative;
+}
+.part-1 {
+    background-color: #3b457c;
+}
+.part-2 {
+    background-color: #f48f36;
+}
+.part-3 {
+    background-color: #ae4e93;
+}
+.drag-handle {
+    position: absolute;
+    top: 0px;
+    width: 20px;
+    height: 100%;
+    background: transparent;
+    cursor: ew-resize;
+    z-index: 3;
+}
+
+.bar .procent {
+    position: absolute;
+    top: -25px;
+    color: var(--dark-text);
+    width: 100%;
+    font-size: 12px;
+    text-align: center;
+    height: 20px;
+}
+
+.drag-handle.left  { left: calc(30%); }   /* Default for part-a */
+.drag-handle.right { left: calc(70%); }   /* Default for part-a + part-b */
+
+.notice {
+    display: none;
+    position: absolute;
+    bottom: 201px;
+    right: 106px;
+}
+
+.triangle {
+    border-bottom: 21px solid transparent;
+    width: 0px;
+    border-left: 18px solid white;
+    background: transparent;
+    border-top: 0px solid transparent;
+    box-shadow: 0px 0px 0px #cdcdcd;
+    margin-left: 68px;
+}
+
+.gif-image {
+    width: 376px;
+    background: white;
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 15px 0px 14px 0;
+    box-shadow: 1px -1px 4px #cdcdcd;
+}
+.gif-image > div{
+    font-size: 12px;
+    text-align: center;
+    width: 100%;
+    padding-bottom: 15px;
+    color: #747474;
+}
+.gif-image img {
+    max-width: 90%;
+    background-color: #a5a5a5;
+    display: block;
+    margin: auto;
+    border-radius: 4px;
+    overflow: hidden;
+    border: none;
+}
+
+.notice a{
+    display: block;
+    width: 77px;
+    margin: auto 14px auto auto;
+    padding: 16px 0 0;
+    cursor: pointer;
+    text-decoration: none;
+    color: #1a77af;
+    font-size: 12px;
+}
+
+#kunden .notice {
+    top: 40px;
+    right: 106px;
+    bottom: unset;
+}

@@ -7,4 +7,4 @@ def index(request):
         'umfrage':Umfrage.objects.first()
     }
 
-    return render(request, 'desktop/anwendung/umfrage.html', context)
+    return render(request, 'desktop/anwendung/index.html', context)

@@ -1,0 +1,31 @@
+{%extends 'desktop/index.html'%}
+{%block body%}
+<template id="drag-template">
+    <div class="drag-handle"></div>
+</template>
+<template id="part-template">
+    <div class="part" style="width: 100%">
+        {~text~}
+        <div class="procent">100%</div>
+    </div>
+</template>
+<div id="header">
+    <div id="tab-buttons">
+        <button data-tab="umfrage" class="tabButton active">Umfrage</button>
+        <button data-tab="warenkorb" class="tabButton">Warenkorb</button>
+        <button data-tab="dritte" class="tabButton">dritte</button>
+        <button data-tab="vierte" class="tabButton">vierte</button>
+        <button data-tab="funfte" class="tabButton">fünfte</button>
+        <button data-tab="sechste" class="tabButton">sechste</button>
+    </div>
+    <div id="fragezeichen">
+        {%if umfrage%}?{%endif%}
+    </div>
+</div>
+{%include 'desktop/anwendung/umfrage.html'%}
+{%include 'desktop/anwendung/warenkorb.html'%}
+{%include 'desktop/anwendung/korrekturen.html'%}
+{%include 'desktop/anwendung/kunden.html'%}
+{%include 'desktop/anwendung/mitarbeiter.html'%}
+{%include 'desktop/anwendung/lohn.html'%}
+{%endblock%}
